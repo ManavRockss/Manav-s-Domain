@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { label: "Resume", href: "https://drive.google.com/file/d/1qQfqC_rf9-IkTX046AatGWndn2EW2_Ep/view?usp=sharing" },
+  { label: "Resume", href: "https://drive.google.com/file/d/1OXV7tpEkQcQ4v6WaIh0CwH2OLSeQLXEP/view?usp=sharing" },
   { label: "Behance", href: "https://www.behance.net/manavsingh24" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/manav-singh-68a722258/" },
 ];
