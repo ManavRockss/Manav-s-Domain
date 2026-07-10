@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, ArrowUp } from "lucide-react";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -176,6 +176,65 @@ export function Contact() {
           className="mt-16 text-center text-[10px] uppercase tracking-[0.3em] text-white/40"
         >
           Always open to new opportunities and collaborations
+        </motion.div>
+
+        {/* Back to top */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease, delay: 0.6 }}
+          className="mt-20 flex flex-col items-center gap-4"
+        >
+          <motion.button
+            data-magnetic
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+            className="group relative flex h-16 w-16 items-center justify-center rounded-full"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.11) 100%)",
+              boxShadow:
+                "0 0 0 1px rgba(255,255,255,0.18), 0 8px 40px -8px rgba(255,255,255,0.12), inset 0 1px 0 0 rgba(255,255,255,0.4), inset 0 -1px 0 0 rgba(255,255,255,0.08), inset 0 0 20px 0 rgba(255,255,255,0.04)",
+              backdropFilter: "blur(20px)",
+            }}
+          >
+            {/* glowing halo on hover */}
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-0 rounded-full opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+              style={{
+                boxShadow: "0 0 30px 6px rgba(255,255,255,0.15), 0 0 60px 12px rgba(255,255,255,0.06)",
+              }}
+            />
+            {/* reflective border ring */}
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-0 rounded-full"
+              style={{
+                padding: 1,
+                background:
+                  "linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.15) 40%, rgba(255,255,255,0.05) 60%, rgba(255,255,255,0.5) 100%)",
+                WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
+                WebkitMaskComposite: "xor",
+                maskComposite: "exclude",
+              }}
+            />
+            <motion.span
+              animate={{ y: [0, -3, 0] }}
+              transition={{ duration: 2.2, ease, repeat: Infinity }}
+              className="relative"
+            >
+              <ArrowUp className="h-5 w-5 text-white/80 transition-colors duration-300 group-hover:text-white" strokeWidth={1.5} />
+            </motion.span>
+          </motion.button>
+
+          <span className="text-[10px] uppercase tracking-[0.35em] text-white/35 transition-colors duration-300 hover:text-white/60 cursor-pointer"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            Back to top
+          </span>
         </motion.div>
       </div>
     </section>
