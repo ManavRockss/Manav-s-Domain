@@ -235,7 +235,7 @@ export function About() {
             className="max-w-2xl text-white/60 leading-relaxed text-sm md:text-base"
           >
             Most people open apps to use them. I open them to notice what's
-            broken first — confusing flows, unnecessary steps, or tiny UX
+            broken first, confusing flows, unnecessary steps, or tiny UX
             decisions that frustrate users without them realizing it. Somewhere
             along the way, that habit turned into a passion for designing
             experiences that feel simple, intuitive, and genuinely human.
@@ -286,13 +286,25 @@ export function About() {
         </div>
 
         <div className="col-span-12 md:col-span-4">
-          <div className="mb-6 text-[10px] uppercase tracking-[0.3em] text-white/40">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, ease, delay: 0.15 }}
+            className="mb-6 text-[10px] uppercase tracking-[0.3em] text-white/40"
+          >
             Currently
-          </div>
-          <p className="text-white/70">
+          </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, ease, delay: 0.25 }}
+            className="text-white/70"
+          >
             Initiating design systems, product thinking, and modern user
             experiences at GeeksforGeeks.
-          </p>
+          </motion.p>
         </div>
       </div>
     </section>

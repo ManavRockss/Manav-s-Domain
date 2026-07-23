@@ -53,7 +53,7 @@ export function Loader({ onDone }: { onDone: () => void }) {
             transition={{ duration: 1, ease, delay: 0.1 }}
             className="relative flex items-center justify-between px-8 py-6 text-[10px] uppercase tracking-[0.3em] text-white/50"
           >
-            <span>Index — 026</span>
+            <span>Manav's Domain</span>
             <span>UI / UX · Portfolio</span>
           </motion.div>
 
